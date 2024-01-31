@@ -1,7 +1,10 @@
+import All from './components/All';
+
 function App() {
 
   return (
     <>
+    <All />
     </>
   )
 }
