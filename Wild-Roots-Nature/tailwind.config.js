@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'custom': ['"EB Garamond"', 'sans-serif'],
+      'custom-1': ['"Antonio"', 'sans-serif'],
+    },
+    clipPath: {
+      'polygon': 'polygon(0 0, 100% 0, 100% 100%, 0% 100%);',
+    },
   },
   plugins: [],
 }

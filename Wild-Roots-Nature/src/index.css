@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#banner-1 {
+    transform: translateX(-100%);
+    transition: transform 1.5s;
+}
+#banner-2 {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.char {
+    transform: translateY(115px);
+    transition: transform .5s;
+}
+
+.clip-polygon {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: 1;
+}
