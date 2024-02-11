@@ -1,25 +1,42 @@
 function Body() {
   return (
     <div>
-      <div className=" p-10 bg-green-700">
+      <div className="p-10 bg-green-800">
         <div>
-          <h1 className="text-[70px] font-extrabold justify-start mt-5 ml-20">
-            What we do
+          <h1 className="text-[70px] font-extrabold float-start mt-5 mx-10">
+            What we do?
           </h1>
-          <div className=" justify-center text-center mt-10 text-[25px]">
+          <div className=" text-start mt-10 text-[25px]">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
-              odit ex, unde facere sed laborum repellat minus veritatis, est cum
-              porro. Fugiat amet rem vel corrupti, tenetur aperiam saepe nostrum
-              suscipit nesciunt eaque laborum, earum harum consectetur voluptas
-              natus cum corporis nisi voluptatem veniam laudantium dolore vitae
-              temporibus quis illo? Vero quisquam iusto ipsam deserunt, eum
-              assumenda facilis animi perferendis commodi aliquid delectus
-              dolores ipsa a nihil tenetur qui alias numquam mollitia repellat
-              cum voluptatibus! Vel laborum rerum, autem repellat non corrupti
-              soluta neque quibusdam dignissimos nulla voluptates quia numquam
-              id laboriosam labore quas ab accusamus corporis ducimus aspernatur
-              ad.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+              necessitatibus ipsum debitis ipsa earum doloribus delectus.
+              Aperiam, enim! Hic consequuntur similique molestiae pariatur
+              voluptates, alias non ut, laudantium dolorem ipsum enim, eligendi
+              voluptatum natus soluta. Perferendis, vero deleniti? Delectus,
+              provident iste rem dicta maiores accusantium voluptates quam
+              illum, ullam aspernatur nesciunt fugiat nostrum cupiditate
+              exercitationem! Ratione dolores cupiditate, harum quos neque iste
+              minus. Cupiditate ratione ab animi adipisci veniam modi. Nesciunt
+              architecto nam facilis, cum ea molestias ullam alias atque. ad.
+            </p>
+          </div>
+        </div>
+        <div>
+          <h1 className="text-[70px] font-extrabold float-end mt-5 mx-10">
+            Why we do it?
+          </h1>
+          <div className=" text-end mt-10 text-[25px]">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+              pariatur atque nobis velit maiores voluptas libero iusto nisi
+              porro praesentium corporis quaerat doloribus hic omnis temporibus
+              beatae consequatur recusandae numquam. Ex fuga quod ea nam
+              consectetur excepturi soluta consequuntur fugit eum sapiente dicta
+              aliquam quos delectus magnam tenetur incidunt rerum placeat
+              dolores, commodi ratione, dignissimos ab. Nemo consequuntur
+              aperiam temporibus, reprehenderit eum ad mollitia beatae.
+              Perspiciatis id dignissimos iste in veritatis reiciendis assumenda
+              quidem, laborum vel, nulla, corporis cumque tempora. ad.
             </p>
           </div>
         </div>

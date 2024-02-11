@@ -32,15 +32,16 @@ function Header() {
   }, []);
   return (
     <div>
-      <div className=" z-10 fixed w-[100%] font-custom-1 flex justify-between bg-green-800">
+      <div className="z-10 fixed w-[100%] font-custom-1 flex justify-between bg-white">
         <div>
           <img className="ml-4 pb-4" src="" />
         </div>
-        <div className=" cursor-pointer flex">
-          <p className="mr-10 mt-2 text-[25px] ">Home</p>
-          <p className="mr-10 mt-2 text-[25px] ">About</p>
-          <p className="mr-10 mt-2 mb-2 pl-2 pr-2 rounded-xl text-[25px] bg-green-300 hover:bg-green-100  ">
-            Contact
+        <div className="flex">
+          <p className="mr-10 mt-2 text-[25px] cursor-pointer ">Home</p>
+          <p className="mr-10 mt-2 text-[25px] cursor-pointer ">About</p>
+          <p className="mr-10 mt-2 text-[25px] cursor-pointer ">Contact</p>
+          <p className="mr-10 mt-2 mb-2 pl-2 pr-2 rounded-xl text-[25px] bg-green-800 hover:bg-green-900 cursor-pointer ">
+            Donate
           </p>
         </div>
       </div>
