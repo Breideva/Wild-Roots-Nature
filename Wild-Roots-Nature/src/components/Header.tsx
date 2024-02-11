@@ -1,63 +1,96 @@
-import { useEffect } from "react"
-import { gsap } from "gsap"
-import SplitType from "split-type"
-
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import SplitType from "split-type";
 
 function Header() {
+  useEffect(() => {
+    const logoTxt = new SplitType("#logo-txt");
 
+    gsap.to(".char", {
+      opacity: 1,
+      stagger: 0.1,
+      delay: 0.2,
+      duration: 0.1,
+    });
 
-    useEffect(() => {
-        const logoTxt = new SplitType('#logo-txt')
+    const handleScroll = () => {
+      const banner1 = document.getElementById("banner-1");
+      const banner2 = document.getElementById("banner-2");
 
+      const scrollPosition = window.scrollY;
 
-        gsap.to('.char', {
-            y: 0,
-            stagger: 0.05,
-            delay: 0.2,
-            duration: .1
-        })
-        gsap.to('.char', {
-            autoAlpha: 0,
-            stagger: .1,
-            delay: 2,
-            duration: .01,
-            repeat: -1,
-            repeatDelay: 1,
-            yoyo: true,
-        })
-        gsap.to('#banner-1', {
-            x: 0,
-            delay: 3,
-        })
-        gsap.to('#banner-2', {
-            opacity: 1,
-            delay: 6
-        })
-    }, []);
-    return (
+      if (scrollPosition > 75) {
+        gsap.to(banner1, { opacity: 1, duration: 1 });
+        gsap.to(banner2, { opacity: 1, duration: 1 });
+      } else {
+        gsap.to(banner1, { opacity: 0, duration: 1 });
+        gsap.to(banner2, { opacity: 0, duration: 1 });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+  return (
+    <div>
+      <div className=" z-10 fixed w-[100%] font-custom-1 flex justify-between bg-green-800">
         <div>
-            <div className="font-custom-1 flex justify-between bg-[#0A8754]">
-                <div>
-                    <p className="ml-4 mt-4 pb-4">logo</p>
-                </div>
-                <div className=" cursor-pointer flex">
-                    <p className="mr-4 mt-2 text-[25px] hover:text-[#004F2D]">Home</p>
-                    <p className="mr-4 mt-2 text-[25px] hover:text-[#004F2D]">About</p>
-                    <p className="mr-4 mt-2 mb-2 pl-2 pr-2 rounded-xl text-[25px] bg-[#BFD7EA] hover:bg-[#91AEC1] hover:text-[#004F2D] ">Contact</p>
-                </div>
-            </div>
-            <div className=" bg-[#004F2D] h-screen flex items-center justify-center"> 
-                <img className=" opacity-90 absolute h-[75%] right-[20.5%]" src="https://images.pexels.com/photos/1834399/pexels-photo-1834399.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
-                <h1 id="logo-txt" className="leading-11 clip-polygon text-[105px] font-custom ">Wild Roots Nature.</h1>
-            </div>
-            <div className="bg-[#91AEC1] flex items-center text-center justify-between ">
-                <p id="banner-1" className="w-[45%] h-auto p-16 font-custom-1 text-[20px]">
-                Empowering communities to become stewards of their natural environments while advocating for policies that promote conservation and biodiversity. Together, we can safeguard our planet's ecological diversity for generations to come.</p>
-                <p id="banner-2" className="opacity-0 w-[45%] h-auto p-12 font-custom-1 text-[20px]">
-                Join our conservation organization in the fight to preserve Earth's biodiversity, combat climate change, and protect vital ecosystems threatened by human activities. Together, we can make a meaningful impact, ensuring a sustainable future for generations to come.</p>
-            </div>  
+          <img className="ml-4 pb-4" src="" />
         </div>
-    )
+        <div className=" cursor-pointer flex">
+          <p className="mr-10 mt-2 text-[25px] ">Home</p>
+          <p className="mr-10 mt-2 text-[25px] ">About</p>
+          <p className="mr-10 mt-2 mb-2 pl-2 pr-2 rounded-xl text-[25px] bg-green-300 hover:bg-green-100  ">
+            Contact
+          </p>
+        </div>
+      </div>
+      <div className="bg-green-800 h-screen flex items-center justify-center">
+        <img
+          className="opacity-85 absolute h-[75%] right-[35%]"
+          src="https://images.pexels.com/photos/566496/pexels-photo-566496.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt=""
+        />
+        <img
+          className="opacity-85 absolute h-[75%] right-[12%]"
+          src="https://images.pexels.com/photos/109391/pexels-photo-109391.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt=""
+        />
+        <img
+          className="opacity-85 absolute h-[75%] right-[20.5%]"
+          src="https://images.pexels.com/photos/1834399/pexels-photo-1834399.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt=""
+        />
+        <h1
+          id="logo-txt"
+          className=" text-gray-100 leading-11 clip-polygon text-[140px] font-custom "
+        >
+          Wild Roots Nature.
+        </h1>
+      </div>
+      <div className="flex items-center text-center justify-between m-24">
+        <p
+          id="banner-1"
+          className=" bg-slate-200 w-[45%] h-auto p-16 font-custom-1 text-[20px]"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A temporibus
+          illum quos? Odio, inventore. Cupiditate quasi tenetur similique odit
+          voluptatum corrupti facere temporibus labore, accusantium expedita?
+          Nobis exercitationem vel officia voluptate optio quae earum quisquam,
+          dignissimos nostrum doloribus inventore tenetur.
+        </p>
+        <p
+          id="banner-2"
+          className=" bg-slate-200 opacity-0 w-[45%] h-auto p-16 font-custom-1 text-[20px]"
+        >
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt
+          blanditiis odit autem ex. Enim consequatur tenetur adipisci ducimus
+          quaerat, exercitationem dignissimos aperiam soluta libero, voluptatem
+          illum! Beatae accusamus adipisci temporibus magni ex! Possimus quos
+          consequuntur facilis? Deleniti, ducimus non? Voluptate!
+        </p>
+      </div>
+    </div>
+  );
 }
 
-export default Header
+export default Header;
