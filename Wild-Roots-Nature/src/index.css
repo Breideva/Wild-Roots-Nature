@@ -6,6 +6,11 @@
     opacity: 0;
     transition: opacity 1s;
 }
+#questions {
+    overflow: hidden;
+    transform: translateY(50px);
+    transition: transform 2s linear;
+}
 
 .char {
     opacity: 0;
@@ -18,4 +23,7 @@
 #bg-text {
     transform: translatex(-200%);
     transition: transform 5s;
+}
+.bg-custom-background {
+    background-image: url(https://th.bing.com/th/id/OIP.Li0U-JB22JFfCTVlgfMcNgHaCx?w=350&h=131&c=7&r=0&o=5&dpr=1.3&pid=1.7);
 }

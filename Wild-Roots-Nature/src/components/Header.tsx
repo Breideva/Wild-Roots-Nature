@@ -16,8 +16,16 @@ function Header() {
     const handleScroll = () => {
       const banner1 = document.getElementById("banner-1");
       const banner2 = document.getElementById("banner-2");
+      //const navigation = document.getElementById("nav");
 
       const scrollPosition = window.scrollY;
+
+      /*if(scrollPosition > 0) {
+        navigation.style.backgroundColor = 'white'
+      } else {
+        navigation.style.backgroundColor = 'rgb(22 101 52)'
+      }*/
+
 
       if (scrollPosition > 75) {
         gsap.to(banner1, { opacity: 1, duration: 1 });
@@ -32,7 +40,10 @@ function Header() {
   }, []);
   return (
     <div>
-      <div className="z-10 fixed w-[100%] font-custom-1 flex justify-between bg-white">
+      <div
+        id="nav"
+        className="z-10 fixed w-[100%] font-custom-1 flex justify-between bg-white"
+      >
         <div>
           <img className="ml-4 pb-4" src="" />
         </div>
@@ -40,12 +51,12 @@ function Header() {
           <p className="mr-10 mt-2 text-[25px] cursor-pointer ">Home</p>
           <p className="mr-10 mt-2 text-[25px] cursor-pointer ">About</p>
           <p className="mr-10 mt-2 text-[25px] cursor-pointer ">Contact</p>
-          <p className="mr-10 mt-2 mb-2 pl-2 pr-2 rounded-xl text-[25px] bg-green-800 hover:bg-green-900 cursor-pointer ">
+          <p className="mr-10 mt-2 mb-2 pl-2 pr-2 rounded-xl text-[25px] bg-white hover:bg-slate-300 cursor-pointer ">
             Donate
           </p>
         </div>
       </div>
-      <div className="bg-green-800 h-screen flex items-center justify-center">
+      <div className="bg-white h-screen flex items-center justify-center">
         <img
           className="opacity-85 absolute h-[75%] right-[35%]"
           src="https://images.pexels.com/photos/566496/pexels-photo-566496.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -63,7 +74,7 @@ function Header() {
         />
         <h1
           id="logo-txt"
-          className=" text-gray-100 leading-11 clip-polygon text-[140px] font-custom "
+          className=" text-black leading-11 clip-polygon text-[140px] font-custom "
         >
           Wild Roots Nature.
         </h1>
