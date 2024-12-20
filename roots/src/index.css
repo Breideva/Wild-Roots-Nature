@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.banners {
+  opacity: 0;
+  transition: opacity 1s;
+}
+#questions {
+  transform: translateY(75px);
+  transition: all 1s linear;
+}
+.char {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.clip-polygon {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+#bg-text {
+  transform: translatex(-200%);
+  transition: transform 5s;
+}
+html {
+ scroll-behavior: smooth;
+}
